@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather III (30-06-2022) - Sanajit Jana (fw19_0513)</title>
     <style>
+
       body {
         font-family: sans-serif;
         background: linear-gradient(
@@ -13,7 +14,7 @@
           #fff
         );
 
-        
+
         height: 120vh;
       }
       #search-bar {
@@ -357,6 +358,7 @@
       let cDes = cloud.toLowerCase();
       let cStat = data.weather[0].main.toLowerCase();
       let minCel = (data.main.temp_min - 270.15).toFixed(0);
+
       let maxCel = (data.main.temp_max - 275.15).toFixed(0);
       let min_max = document.getElementById("min-max");
       min_max.innerText = `(Min: ${minCel}°C | Max: ${maxCel}°C)`;
@@ -387,15 +389,21 @@
       let humidity = document.getElementById("humidity");
       humidity.innerHTML = `${data.main.humidity}<br />Humidity`;
 
+
       let wind = document.getElementById("wind");
       wind.innerHTML = `${data.wind.speed}<br />Wind`;
 
       let pressure = document.getElementById("pressure");
       pressure.innerHTML = `${data.main.pressure}<br />Pressure`;
 
+
+
       let iframe = document.getElementById("gmap_canvas");
       iframe.src = mapUrl;
     }
+
+
+
 
     //change unix time to normal timeStamp
     const getTime = (timeStamp) => {
