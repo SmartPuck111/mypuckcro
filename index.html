@@ -396,9 +396,14 @@
       let pressure = document.getElementById("pressure");
       pressure.innerHTML = `${data.main.pressure}<br />Pressure`;
 
+
+
       let iframe = document.getElementById("gmap_canvas");
       iframe.src = mapUrl;
     }
+
+
+
 
     //change unix time to normal timeStamp
     const getTime = (timeStamp) => {
